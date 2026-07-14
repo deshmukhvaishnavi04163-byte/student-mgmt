@@ -1,0 +1,145 @@
+<!-- 
+<html>
+
+<head>
+
+<title>Student Registration</title>
+
+</head>
+
+<body>
+
+<h2>Student Registration Form</h2>
+
+<form action="/add" method="POST">
+
+<input type="text"
+name="name"
+placeholder="Enter Name"
+required>
+
+<br><br>
+
+<input type="number"
+name="age"
+placeholder="Enter Age"
+required>
+
+<br><br>
+
+<input type="text"
+name="course"
+placeholder="Course"
+required>
+
+<br><br>
+
+<input type="text"
+name="city"
+placeholder="City"
+required>
+
+<br><br>
+
+<input type="submit"
+value="Register">
+
+</form>
+
+<br>
+
+<a href="/students">
+
+View Students
+
+</a>
+
+</body>
+
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Library Management System</title>
+</head>
+<body>
+
+<h2>Add Book</h2>
+
+<form action="/add" method="POST">
+    <input type="text" name="title" placeholder="Book Title" required><br><br>
+
+    <input type="text" name="author" placeholder="Author Name" required><br><br>
+
+    <input type="text" name="category" placeholder="Category" required><br><br>
+
+    <input type="number" name="quantity" placeholder="Quantity" required><br><br>
+
+    <button type="submit">Add Book</button>
+</form>
+
+</body>
+</html> -->
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <h1>Student Management System</h1>
+
+    <!-- Student Form -->
+    <form id="studentForm">
+
+        <input type="hidden" id="studentId">
+
+        <input type="text" id="name" placeholder="Enter Name" required>
+
+        <input type="number" id="age" placeholder="Enter Age" required>
+
+        <input type="text" id="course" placeholder="Enter Course" required>
+
+        <input type="text" id="city" placeholder="Enter City" required>
+
+        <button type="submit" id="submitBtn">
+            Add Student
+        </button>
+
+    </form>
+
+    <hr>
+
+    <!-- Student Table -->
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Course</th>
+                <th>City</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+
+        <tbody id="studentTable">
+        </tbody>
+    </table>
+
+    <!-- JavaScript -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+</html>
